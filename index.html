@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="auther" content="Fatemeh Rashidi">
+        <meta name="keywords" content="android, css, js, html">
+        <meta name="description" content="android animated logo">
+        <meta name="veiwport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <div id="android">
+            <div class="antenna a1"></div>
+            <div class="antenna a2"></div>
+            <div class="eye e1" id="eye1"></div>
+            <div class="eye e2" id="eye2"></div>
+            <div id="head"></div>
+            <div id="body"></div>
+            <div class="hand left" id="left_hand"></div>
+            <div class="hand right" id="right_hand"></div>
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+        </div>
+
+        <div id="android-text">
+            <div class="char" id="a1"></div>
+            <div class="char" id="a2"></div>
+            <div class="char" id="n"></div>
+            <div class="char" id="d1"></div>
+            <div class="char" id="r1"></div>
+            <div class="char" id="r2"></div>
+            <div class="char" id="o"></div>
+            <div class="char" id="i"></div>
+            <div class="char" id="d2"></div>
+        </div>
+
+        <script>
+            var left_hand = document.getElementById("left_hand");
+            var right_hand = document.getElementById("right_hand");
+            var body = document.getElementById("body");
+            var head = document.getElementById("head");
+            var eye1 = document.getElementById("eye1");
+            var eye = document.getElementById("eye2");
+
+            head.onclick = function() {
+                eye1.style.width = "13px";
+                eye1.style.height = "13px";
+                eye2.style.width = "13px";
+                eye2.style.height = "13px";
+            }
+
+            body.onclick = function() {
+                eye1.style.width = "13px";
+                eye1.style.height = "3px";
+                eye2.style.width = "13px";
+                eye2.style.height = "3px";
+
+            }
+
+            left_hand.onclick = function() {
+                left_hand.style.transformOrigin = "top left";
+                left_hand.style.transform = "rotate(120deg)";
+                left_hand.style.transition = "2s";
+                // function a  (){
+
+                // }
+                // const a = ()=>{
+
+                // }
+                // a();
+                setTimeout(()=> {
+                    left_hand.style.transform = "rotate(0deg)";}, 700); 
+            }
+        
+            right_hand.onclick = function() {
+                right_hand.style.transformOrigin = "top right";
+                right_hand.style.transform = "rotate(-120deg)";
+                right_hand.style.transition = "2s";
+                setTimeout(()=> {
+                    right_hand.style.transform = "rotate(0deg)";}, 700); 
+            }
+        
+        </script>
+
+    </body>
+</html>
